@@ -19,18 +19,18 @@ Server will be running on port: 5000 and 5001
 
 
 #### Docker
-docker build -t desafioaltudo -f DesafioAltudo.API\Dockerfile .
-docker run -d --rm --name desafioaltudo-container desafioaltudo -p 5000:5000
+- docker build -t desafioaltudo -f DesafioAltudo.API\Dockerfile .
+- docker run -d --rm --name desafioaltudo-container desafioaltudo -p 5000:5000
 
 
 #### Consuming the API: Postman
 
-http://localhost:5001/page
+- http://localhost:5001/page
 
-Object Json:
-{
-  "Url": "http://www.google.com"
-}
+ - Object Json:
+ - { "Url": "http://www.google.com" }
 
 
+
+### Example:
 ![image](https://user-images.githubusercontent.com/39167458/126337957-965f550b-1c23-47aa-b0cf-93ba9b0aa7a4.png)

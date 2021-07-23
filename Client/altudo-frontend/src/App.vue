@@ -3,7 +3,10 @@
     <v-main>
       <router-view />
     </v-main>
-    <Footer></Footer>
+
+    <v-footer app padless>
+      <Footer></Footer>
+    </v-footer>
   </v-app>
 </template>
 
@@ -12,8 +15,5 @@ import Footer from "@/components/Footer";
 export default {
   name: "App",
   components: { Footer },
-  data: () => ({
-    //
-  }),
 };
 </script>

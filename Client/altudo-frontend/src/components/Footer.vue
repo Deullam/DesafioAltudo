@@ -1,17 +1,15 @@
 <template>
-<v-container>
-
-  <v-footer padless>
-    <v-col class="text-center" cols="12">
-      {{ new Date().getFullYear() }} — <strong>Deullam Justi</strong>
+  <v-row>
+    <v-col cols="12">
+        <v-container class="text-center">
+          {{ new Date().getFullYear() }} — <strong>Deullam Justi</strong>
+        </v-container>
     </v-col>
-  </v-footer>
-
-</v-container>
+  </v-row>
 </template>
 
 <script>
 export default {
-  name: "footer",
+  name: "FooterMain",
 };
 </script>

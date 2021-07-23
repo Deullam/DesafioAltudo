@@ -47,6 +47,10 @@ namespace DesafioAltudo.Domain.Features
                 {
                     AutoDetectEncoding = true,
                 };
+                if (linkUrl.StartsWith("www."))
+                {
+                    linkUrl = "http://" + linkUrl;
+                }
 
                 HtmlDocument document = web.Load(linkUrl);
                 Url = linkUrl;
@@ -66,10 +70,10 @@ namespace DesafioAltudo.Domain.Features
          * <param name="document">HtmlDocument</param>*/
         public void GetImages(HtmlDocument document)
         {
-
             LinksImages =  document.DocumentNode.Descendants("img")
                                             .Select(e => e.GetAttributeValue("src", null))
-                                            .Where(s => !String.IsNullOrEmpty(s));
+                                            .Where(s => !String.IsNullOrEmpty(s)).Where(link => link.Contains("http")).Where(link => !link.Contains("data:"));
+                
         }
 
         /** 

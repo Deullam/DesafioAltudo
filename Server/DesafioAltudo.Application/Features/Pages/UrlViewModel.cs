@@ -8,6 +8,6 @@ namespace DesafioAltudo.Application.Features.Pages
     public class UrlViewModel
     {
         [Key]
-        public Uri Url { get; set; }
+        public string Url { get; set; }
     }
 }

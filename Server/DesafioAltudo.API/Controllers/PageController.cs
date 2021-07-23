@@ -34,7 +34,7 @@ namespace DesafioAltudo.API.Controllers
             try
             {
                 if (!ModelState.IsValid) return BadRequest(ModelState.Values.SelectMany(e => e.Errors));
-                PageViewModel page = _pageService.GetPageDetails(link.Url.AbsoluteUri);
+                PageViewModel page = _pageService.GetPageDetails(link.Url);
 
                 return Json(page);
             }
